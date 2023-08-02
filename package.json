@@ -10,7 +10,9 @@
     "lint": "next lint",
     "db:start": "docker-compose -f .docker/docker-compose.yml up -d --build --remove-orphans",
     "db:stop": "docker-compose -f .docker/docker-compose.yml down",
-    "db:restart": "docker-compose -f .docker/docker-compose.yml restart"
+    "db:restart": "docker-compose -f .docker/docker-compose.yml restart",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@types/node": "20.4.5",
@@ -25,6 +27,17 @@
   },
   "devDependencies": {
     "@pandacss/dev": "^0.9.0",
-    "prisma": "^5.1.0"
+    "@storybook/addon-essentials": "^7.2.0",
+    "@storybook/addon-interactions": "^7.2.0",
+    "@storybook/addon-links": "^7.2.0",
+    "@storybook/addon-onboarding": "^1.0.8",
+    "@storybook/blocks": "^7.2.0",
+    "@storybook/nextjs": "^7.2.0",
+    "@storybook/react": "^7.2.0",
+    "@storybook/testing-library": "^0.2.0",
+    "eslint-plugin-storybook": "^0.6.13",
+    "prisma": "^5.1.0",
+    "storybook": "^7.2.0",
+    "tsconfig-paths-webpack-plugin": "^4.1.0"
   }
 }
